@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 import memories from '../../images/w.png';
 import * as actionType from '../../constants/actionTypes';
 import useStyles from './styles';
+import decode from 'jwt-decode';
 
 const NavBar = () => {
     const classes = useStyles();
@@ -25,6 +26,12 @@ const NavBar = () => {
     useEffect(() => {
     const token = user?.token;
     
+    if (token) {
+        const decodedToken = decode(token);
+  
+        if (decodedToken.exp * 1000 < new Date().getTime()) logout();
+    }
+
     setUser(JSON.parse(localStorage.getItem('profile')));
     }, [location]);
     

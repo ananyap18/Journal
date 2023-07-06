@@ -10,35 +10,46 @@ export default makeStyles((theme) => ({
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: '10px 50px',
-  },
-  heading: {
-    color: 'rgba(40, 78, 191)',
-    fontFamily: 'Georgia, serif', // Specify the desired font family here
-    fontStyle: 'none',
-    fontSize: '32px',
-    fontWeight: 'bold',
-    textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)',
-    textDecoration: 'none',
-    '&:hover': {
-      color: 'rgba(40, 78, 191, 0.8)',
+    [theme.breakpoints.down('sm')]: {
+      flexDirection: 'column',
     },
   },
+  heading: {
+    color: theme.palette.primary.main,
+    textDecoration: 'none',
+    fontSize: '2em',
+    fontWeight: 300,
+  },
   image: {
-    marginLeft: '15px',
+    marginLeft: '10px',
+    marginTop: '5px',
   },
   toolbar: {
     display: 'flex',
     justifyContent: 'flex-end',
     width: '400px',
+    [theme.breakpoints.down('sm')]: {
+      width: 'auto',
+    },
   },
   profile: {
     display: 'flex',
     justifyContent: 'space-between',
     width: '400px',
+    alignItems: 'center',
+    [theme.breakpoints.down('sm')]: {
+      width: 'auto',
+      marginTop: 20,
+      justifyContent: 'center',
+    },
+  },
+  logout: {
+    marginLeft: '20px',
   },
   userName: {
     display: 'flex',
     alignItems: 'center',
+    textAlign: 'center',
   },
   brandContainer: {
     display: 'flex',

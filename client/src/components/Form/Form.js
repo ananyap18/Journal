@@ -36,7 +36,7 @@ const Form = ({currentId, setCurrentId}) => {
 
   if(!user?.result?.name) {
     return (
-      <Paper className={classes.paper}>
+      <Paper className={classes.paper} elevation={6}>
         <Typography variant="h6" align="center">
           Please Sign In to create your own dyree and see other dyree entries!
         </Typography>
@@ -55,9 +55,9 @@ const Form = ({currentId, setCurrentId}) => {
   }
 
   return (
-    <Paper className={classes.paper}>
+    <Paper className={classes.paper} elevation = {6}>
       <form autoComplete='off' noValidate className= {`${classes.root} ${classes.form}`} onSubmit={handleSubmit}>
-        <Typography variant="h6"> {currentId ? "Editing" : "Creating"} a Memory</Typography>
+        <Typography variant="h6"> {currentId ? "Editing" : "Creating"} an Entry</Typography>
 
       <TextField 
         name="title" 

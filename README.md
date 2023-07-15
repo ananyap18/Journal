@@ -1,4 +1,5 @@
 # Journal - A social media app 👥📚📸
+![memoriesText](https://github.com/ananyap18/Journal/assets/71277914/6fd82b01-d349-412d-b74c-b2cd7bc029c0)
 
 A social media application built using the MERN stack, where users can share their experiences, follow each other, comment on posts, and filter content based on names and tags.
 

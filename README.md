@@ -53,22 +53,21 @@ A social media application built using the MERN stack, where users can share the
    ```
 2. Install the dependencies for both backend and frontend:
    ```bash
-   # Install backend dependencies
-    cd backend
+    cd server
     npm install
-    # Install frontend dependencies
-    cd ../frontend
+    ```
+   ```bash
+    cd ../client
     npm install
    ```
 3. Configuration: Rename the .env.example file in the backend directory to .env and update the configuration values such as MongoDB connection URL, JWT secret, etc.
 4. Start the application:
    ```bash
-   # Start the backend server
-    cd backend
+    cd server
     npm start
-
-    # Start the frontend development server
-    cd ../frontend
+   ```
+   ```bash
+    cd ../client
     npm start
    ```
 The application should now be running at http://localhost:3000. ▶️
